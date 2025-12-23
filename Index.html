@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profil MFZL</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(-45deg, #66b3ff, #3399ff, #3399ff, #66b3ff);
+  background-size: 1200% 1200%;
+  animation: bgSmooth 40s ease infinite;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+@keyframes bgSmooth {
+  0% {background-position: 0% 50%;}
+  25% {background-position: 50% 50%;}
+  50% {background-position: 100% 50%;}
+  75% {background-position: 50% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/* Card container */
+.card {
+  background: rgba(0,0,0,0.45);
+  padding: 30px;
+  border-radius: 20px;
+  width: 95%;
+  max-width: 450px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+img.profile {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 2px solid #3399ff;
+  margin-bottom: 15px;
+  position: relative;
+  box-shadow: 0 0 15px 4px rgba(102, 179, 255, 0.6); /* Lingkaran cahaya biru muda */
+  transition: box-shadow 0.3s ease;
+}
+
+img.profile:hover {
+  box-shadow: 0 0 25px 8px rgba(102, 179, 255, 0.8);
+}
+
+h2 {
+  margin: 10px 0;
+  font-size: 26px;
+  letter-spacing: 1px;
+}
+
+/* Button sosial / pilihan gradient */
+a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 12px 0;
+  padding: 12px;
+  border-radius: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  color: white;
+  background: linear-gradient(90deg, #66ccff, #3399ff, #009966);
+  background-size: 400% 400%;
+  animation: gradientMove 6s ease infinite;
+  box-shadow: 0 0 8px rgba(102,179,255,0.5);
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(102,179,255,0.7);
+}
+
+@keyframes gradientMove {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/* ID Game Card */
+.game-card {
+  background: rgba(0,0,0,0.5);
+  border-radius: 15px;
+  padding: 20px;
+  margin-top: 20px;
+  color: white;
+}
+
+.game-card h3 {
+  margin: 0 0 10px 0;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+/* ID row */
+.game-id {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #3399ff;
+  padding: 12px 15px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  transition: background 0.3s;
+}
+
+.game-id:hover {
+  background: #66b3ff;
+}
+
+.game-id strong {
+  font-size: 16px;
+}
+
+/* Button Copy */
+.game-id button {
+  background: rgba(0,0,0,0.3);
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  transition: background 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 5px rgba(102,179,255,0.5);
+}
+.game-id button:hover {
+  background: rgba(0,0,0,0.5);
+  box-shadow: 0 0 10px rgba(102,179,255,0.7);
+}
+
+/* Popup / Notis muncul bila copy */
+.popup {
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #3399ff; 
+  color: white;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes popupAnim {
+  0% {opacity: 0; transform: translateX(-50%) translateY(0);}
+  50% {opacity: 1; transform: translateX(-50%) translateY(-20px);}
+  100% {opacity: 0; transform: translateX(-50%) translateY(-40px);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <img src="https://i.imgur.com/4M34hi2.png" alt="MFZL" class="profile">
+  <h2>MFZL</h2>
+  <p>Content Creator | Gamer 🎮</p>
+
+  <a href="https://www.tiktok.com/@username" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/3046/3046123.png" width="24" height="24"> TikTok
+  </a>
+  <a href="https://www.instagram.com/username" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" width="24" height="24"> Instagram
+  </a>
+  <a href="https://wa.me/60123456789" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="24" height="24"> WhatsApp
+  </a>
+  <a href="mailto:emailanda@gmail.com">
+    <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" width="24" height="24"> E-mail
+  </a>
+
+  <div class="game-card">
+    <h3>ID Game</h3>
+    <div class="game-id">
+      <strong>ML: 1629228971 (16890)</strong>
+      <button onclick="copyID('mlID', this)">📋 Copy</button>
+    </div>
+    <div class="game-id">
+      <strong>Free Fire: 2340027280</strong>
+      <button onclick="copyID('ffID', this)">📋 Copy</button>
+    </div>
+  </div>
+</div>
+
+<script>
+function copyID(id, btn) {
+  let text = '';
+  if(id === 'mlID') text = '1629228971 (16890)';
+  if(id === 'ffID') text = '2340027280';
+  
+  navigator.clipboard.writeText(text);
+
+  // Buat popup / notis
+  let notice = document.createElement('div');
+  notice.className = 'popup';
+  notice.innerText = 'ID berjaya disalin! ✅';
+  btn.appendChild(notice);
+
+  notice.style.animation = 'popupAnim 1.2s forwards';
+
+  setTimeout(() => {
+    if(btn.contains(notice)) btn.removeChild(notice);
+  }, 1200);
+}
+</script>
+
+</body>
+  </html>
